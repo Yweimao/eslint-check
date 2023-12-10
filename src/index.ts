@@ -4,10 +4,9 @@ export async function run(_opts?: any) {
   program
     .command("check [value]")
     .description("eslint rule check 11")
-    .option("-f, --force", "overwrite target directory if it exist")
-    .action(async (name, vale) => {
-      console.log("test");
-      require("@/commands/eslint-check")(name, vale);
+    .option("-s, --scan", "scan you project eslint rules")
+    .action(async (opt) => {
+      require("@/commands/eslint-check")(opt);
     });
 
   // 解析用户传递的参数

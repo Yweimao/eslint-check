@@ -32,6 +32,7 @@
     "lint-staged": "^15.2.0"
   },
   "devDependencies": {
+    "eslint": "7.21.0",
     "father": "^4.3.7",
     "husky": "^8.0.3",
     "prettier": "2.6.2",
