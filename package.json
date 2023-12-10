@@ -25,6 +25,9 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "dependencies": {
+    "lint-staged": "^15.2.0"
+  },
   "devDependencies": {
     "father": "^4.3.7",
     "husky": "^8.0.3",
