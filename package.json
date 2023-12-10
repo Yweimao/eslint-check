@@ -1,0 +1,35 @@
+{
+  "name": "eslint-check",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "dev": "father dev",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build",
+    "pub": "npm publish",
+    "pub-beta": "npm publish --tag beta",
+    "yalc-push": "yalc push"
+  },
+  "lint-staged": {
+    "*.{js,md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "devDependencies": {
+    "father": "^4.3.7",
+    "husky": "^8.0.3",
+    "prettier": "2.6.2",
+    "prettier-plugin-organize-imports": "3.0.0",
+    "prettier-plugin-packagejson": "2.2.18"
+  }
+}
