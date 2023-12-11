@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function getFile(dirpath: any) {
+export function getFile(dirpath: any) {
   // 根目录的路径
   const rootDirectory = path.join(process.cwd(), dirpath);
 
@@ -35,5 +35,3 @@ function getFile(dirpath: any) {
   const res = readFiles(rootDirectory);
   return res;
 }
-
-module.exports = getFile;

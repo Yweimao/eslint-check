@@ -1,8 +1,8 @@
 const { CLIEngine } = require("eslint");
 
-function getEslintReports(baseConfig: object, fix = false, files: any) {
+export function getEslintReports(baseConfig: object, fix = false, files: any) {
   let zzEslintCliEngine: any = "";
-  let reports = [];
+  let reports: any = [];
   zzEslintCliEngine = new CLIEngine({
     baseConfig,
     fix: !!fix,
@@ -10,6 +10,12 @@ function getEslintReports(baseConfig: object, fix = false, files: any) {
   });
 
   files.forEach((file: { source: string; path: string }) => {
+    if (
+      file.path ==
+      "/Users/yeweimao/Desktop/zzproject/streamline_detail/src/components/z-waterfall/index.vue"
+    ) {
+      console.log("file", file.source);
+    }
     zzEslintCliEngine
       .executeOnText(file.source, file.path)
       .results.forEach((result: any) => {
@@ -38,5 +44,3 @@ function getEslintReports(baseConfig: object, fix = false, files: any) {
       });
   });
 }
-
-module.exports = getEslintReports;

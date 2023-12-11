@@ -14,10 +14,15 @@
     "jsx": "react",
     "baseUrl": ".",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules",
+    "src/eslintConfig/**/*.js",
+    "src/eslintConfig/**/*.ts"
+  ],
   "include": ["src/**/*.ts", "src/**/*.js"]
 }
